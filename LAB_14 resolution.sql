@@ -19,6 +19,11 @@ FROM film
 ORDER BY length, title
 LIMIT 1);
 
+SELECT
+	MIN(length) as min_duration,
+    MAX(length) as max_duration
+from film;
+
 SELECT 
     FLOOR(AVG(length) / 60) AS hours,
     FLOOR(AVG(length) % 60) AS minutes
